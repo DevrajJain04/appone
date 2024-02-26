@@ -3,7 +3,6 @@ import 'package:appone/services/auth/auth_provider.dart';
 import 'package:appone/services/auth/auth_user.dart';
 import 'package:test/test.dart';
 
-
 void main() {
   group('Mock Authentication', () {
     final provider = MockAuthProvider();
@@ -118,7 +117,7 @@ class MockAuthProvider implements AuthProvider {
     if (password == 'foobar') throw WrongPasswordAuthException();
     const user = AuthUser(
       // id: 'my_id',
-      isEmailVerified: false,
+      isEmailVerified: false, email: 'foo@bar.com',
       // email: 'foo@bar.com',
     );
     _user = user;
@@ -140,7 +139,7 @@ class MockAuthProvider implements AuthProvider {
     if (user == null) throw UserNotFoundAuthException();
     const newUser = AuthUser(
       // id: 'my_id',
-      isEmailVerified: true,
+      isEmailVerified: true, email: 'foo@bar.com',
       // email: 'foo@bar.com',
     );
     _user = newUser;

@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:js_interop';
-
 import 'package:appone/services/crud/crud_exceptions.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';

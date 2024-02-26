@@ -1,7 +1,8 @@
 import 'package:appone/constants/routes.dart';
 import 'package:appone/services/auth/auth_service.dart';
 import 'package:appone/views/login_view.dart';
-import 'package:appone/views/notes_view.dart';
+import 'package:appone/views/notes/new_note_view.dart';
+import 'package:appone/views/notes/notes_view.dart';
 import 'package:appone/views/register_view.dart';
 import 'package:appone/views/verifyemail_view.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,7 @@ Future<void> main() async {
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
         verifyEmailRoute: (context) => const VerifyEmailView(),
+        newNoteRoute: (context) => const NewNoteView(),
       },
     ),
   );
@@ -45,7 +47,7 @@ class HomePage extends StatelessWidget {
                 } else {
                   return const VerifyEmailView();
                 }
-              } else { 
+              } else {
                 return const LoginView();
               }
             default:
